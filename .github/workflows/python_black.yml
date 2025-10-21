@@ -5,16 +5,17 @@ on:
   push: null
   pull_request: null 
 
-jobs: 
-  name: Python Black Lint
-  runs-on: ubuntu-latest
-
-  steps: 
-    - name: Checkout Code
-      uses: actions.checkout@v5
-
-    - name: Run Python Black Linter
-      uses: psf/black@stable
-      with: 
-        options: "--check --diff"
-        src: "."
+jobs:
+  lint:
+    name: Python Black Lint
+    runs-on: ubuntu-latest
+  
+    steps: 
+      - name: Checkout Code
+        uses: actions.checkout@v5
+  
+      - name: Run Python Black Linter
+        uses: psf/black@stable
+        with: 
+          options: "--check --diff"
+          src: "."
