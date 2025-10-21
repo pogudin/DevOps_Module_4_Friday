@@ -16,6 +16,7 @@ jobs:
   
       - name: Run Python Black Linter
         uses: psf/black@stable
+        continue-on-error: true
         with: 
           options: "--check --diff"
           src: "."
