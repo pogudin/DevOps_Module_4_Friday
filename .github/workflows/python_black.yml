@@ -9,6 +9,9 @@ jobs:
   lint:
     name: Python Black Lint
     runs-on: ubuntu-latest
+    permissions: 
+      contents: read
+      security-events: write
   
     steps: 
       - name: Checkout Code
