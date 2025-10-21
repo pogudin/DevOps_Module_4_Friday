@@ -20,3 +20,12 @@ jobs:
         with: 
           options: "--check --diff"
           src: "."
+
+      - name: Run Bandit Scanner
+        uses: reactive-firewall/python-bandit-scan@v2.3
+        with: 
+            path: "."
+            level: high
+            confidence: high
+            exit_zero: true
+        
